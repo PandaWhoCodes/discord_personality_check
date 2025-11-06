@@ -1,0 +1,581 @@
+# MBTI Personality Test Questions
+# 44 questions total - 11 per dimension (E/I, S/N, T/F, J/P)
+# Weight scale: +2 (strongly first letter), +1 (moderately first letter),
+#               -1 (moderately second letter), -2 (strongly second letter)
+
+questions:
+  # Extraversion/Introversion Questions (11)
+  - id: "ei_01"
+    text: "At social gatherings, you usually..."
+    dimension: "EI"
+    options:
+      - text: "Seek out new people to meet and energize from the crowd"
+        weight: 2
+      - text: "Enjoy meeting some new people but need breaks"
+        weight: 1
+      - text: "Prefer deep conversations with a few close friends"
+        weight: -1
+      - text: "Feel drained and prefer to leave early"
+        weight: -2
+
+  - id: "ei_02"
+    text: "After a long day, you prefer to..."
+    dimension: "EI"
+    options:
+      - text: "Go out with friends or attend an event"
+        weight: 2
+      - text: "Have a quiet evening at home alone"
+        weight: -2
+      - text: "Spend time with one or two close people"
+        weight: -1
+      - text: "It depends on the day"
+        weight: 0
+
+  - id: "ei_03"
+    text: "When working on a project, you..."
+    dimension: "EI"
+    options:
+      - text: "Thrive in group brainstorming sessions"
+        weight: 2
+      - text: "Prefer working alone to maintain focus"
+        weight: -2
+      - text: "Like collaborating but need solo time to process"
+        weight: -1
+      - text: "Enjoy bouncing ideas off others"
+        weight: 1
+
+  - id: "ei_04"
+    text: "Your ideal weekend involves..."
+    dimension: "EI"
+    options:
+      - text: "Multiple social activities with various people"
+        weight: 2
+      - text: "Quiet time for hobbies and rest"
+        weight: -2
+      - text: "One meaningful gathering with close friends"
+        weight: -1
+      - text: "A mix of social time and solitude"
+        weight: 0
+
+  - id: "ei_05"
+    text: "When you have an idea, you..."
+    dimension: "EI"
+    options:
+      - text: "Immediately share it with others to discuss"
+        weight: 2
+      - text: "Think it through internally before mentioning it"
+        weight: -2
+      - text: "Refine it a bit then share with trusted people"
+        weight: -1
+      - text: "Talk it through to clarify your thinking"
+        weight: 1
+
+  - id: "ei_06"
+    text: "In ministry settings, you feel most energized when..."
+    dimension: "EI"
+    options:
+      - text: "Leading large group activities or worship"
+        weight: 2
+      - text: "Serving behind the scenes or in prayer"
+        weight: -2
+      - text: "One-on-one discipleship or counseling"
+        weight: -1
+      - text: "Teaching or facilitating discussions"
+        weight: 1
+
+  - id: "ei_07"
+    text: "Your phone rings with a casual call from a friend. You..."
+    dimension: "EI"
+    options:
+      - text: "Answer eagerly and enjoy a long chat"
+        weight: 2
+      - text: "Let it go to voicemail unless you're in the mood"
+        weight: -2
+      - text: "Answer briefly then suggest texting instead"
+        weight: -1
+      - text: "Answer and see how the conversation goes"
+        weight: 0
+
+  - id: "ei_08"
+    text: "When processing a sermon or Bible study, you..."
+    dimension: "EI"
+    options:
+      - text: "Want to discuss it immediately with others"
+        weight: 2
+      - text: "Need time alone to reflect and pray about it"
+        weight: -2
+      - text: "Journal privately before discussing"
+        weight: -1
+      - text: "Think out loud with one trusted person"
+        weight: 1
+
+  - id: "ei_09"
+    text: "You feel most spiritually refreshed through..."
+    dimension: "EI"
+    options:
+      - text: "Corporate worship and fellowship"
+        weight: 2
+      - text: "Solitary prayer and meditation"
+        weight: -2
+      - text: "Small group intimacy and sharing"
+        weight: -1
+      - text: "A combination of community and solitude"
+        weight: 0
+
+  - id: "ei_10"
+    text: "When you're stressed, you..."
+    dimension: "EI"
+    options:
+      - text: "Seek out friends to talk through it"
+        weight: 2
+      - text: "Withdraw to process alone"
+        weight: -2
+      - text: "Need some alone time first, then share"
+        weight: -1
+      - text: "Talk to God and one close friend"
+        weight: 0
+
+  - id: "ei_11"
+    text: "In a church small group, you..."
+    dimension: "EI"
+    options:
+      - text: "Speak up frequently and enjoy group discussion"
+        weight: 2
+      - text: "Listen mostly and share when you have something meaningful"
+        weight: -2
+      - text: "Contribute occasionally after thinking things through"
+        weight: -1
+      - text: "Engage actively but appreciate quiet moments"
+        weight: 1
+
+  # Sensing/Intuition Questions (11)
+  - id: "sn_01"
+    text: "When reading Scripture, you focus on..."
+    dimension: "SN"
+    options:
+      - text: "The specific details and practical applications"
+        weight: 2
+      - text: "Deeper meanings, symbols, and overarching themes"
+        weight: -2
+      - text: "How it connects to broader theological patterns"
+        weight: -1
+      - text: "What it literally says and how to apply it"
+        weight: 1
+
+  - id: "sn_02"
+    text: "You prefer sermons that..."
+    dimension: "SN"
+    options:
+      - text: "Give clear, practical steps to apply"
+        weight: 2
+      - text: "Explore deep theological concepts and possibilities"
+        weight: -2
+      - text: "Connect biblical themes to life's big questions"
+        weight: -1
+      - text: "Explain the text clearly with examples"
+        weight: 1
+
+  - id: "sn_03"
+    text: "When planning an event, you..."
+    dimension: "SN"
+    options:
+      - text: "Focus on specific logistics and details"
+        weight: 2
+      - text: "Envision the big picture and overall impact"
+        weight: -2
+      - text: "Think about the experience and meaning it creates"
+        weight: -1
+      - text: "Start with vision then work out details"
+        weight: 0
+
+  - id: "sn_04"
+    text: "You trust more..."
+    dimension: "SN"
+    options:
+      - text: "Your direct experience and proven methods"
+        weight: 2
+      - text: "Your intuition about future possibilities"
+        weight: -2
+      - text: "Insights that come from seeing patterns"
+        weight: -1
+      - text: "Facts combined with gut feelings"
+        weight: 0
+
+  - id: "sn_05"
+    text: "When someone shares a problem, you tend to..."
+    dimension: "SN"
+    options:
+      - text: "Ask specific questions about what happened"
+        weight: 2
+      - text: "See underlying patterns and possibilities"
+        weight: -2
+      - text: "Wonder about the deeper meaning or purpose"
+        weight: -1
+      - text: "Focus on the facts of the situation"
+        weight: 1
+
+  - id: "sn_06"
+    text: "You describe yourself as more..."
+    dimension: "SN"
+    options:
+      - text: "Practical and realistic"
+        weight: 2
+      - text: "Imaginative and visionary"
+        weight: -2
+      - text: "Creative and future-oriented"
+        weight: -1
+      - text: "Grounded but open to new ideas"
+        weight: 0
+
+  - id: "sn_07"
+    text: "When God seems to be leading you, you..."
+    dimension: "SN"
+    options:
+      - text: "Look for clear, specific signs and confirmations"
+        weight: 2
+      - text: "Sense direction through impressions and insights"
+        weight: -2
+      - text: "Feel drawn toward possibilities you can't fully explain"
+        weight: -1
+      - text: "Want both confirmation and a sense of peace"
+        weight: 0
+
+  - id: "sn_08"
+    text: "You're more interested in..."
+    dimension: "SN"
+    options:
+      - text: "What is actually happening right now"
+        weight: 2
+      - text: "What could be possible in the future"
+        weight: -2
+      - text: "The potential and meaning behind current events"
+        weight: -1
+      - text: "Present reality with an eye to the future"
+        weight: 0
+
+  - id: "sn_09"
+    text: "When learning something new, you prefer..."
+    dimension: "SN"
+    options:
+      - text: "Step-by-step instructions with examples"
+        weight: 2
+      - text: "Understanding the overall concept first"
+        weight: -2
+      - text: "Grasping the theory then figuring out details"
+        weight: -1
+      - text: "A mix of explanation and hands-on practice"
+        weight: 0
+
+  - id: "sn_10"
+    text: "Your prayers tend to be more..."
+    dimension: "SN"
+    options:
+      - text: "Specific requests about concrete needs"
+        weight: 2
+      - text: "Abstract expressions of longing and vision"
+        weight: -2
+      - text: "Focused on God's bigger purposes and kingdom"
+        weight: -1
+      - text: "A blend of specific and general"
+        weight: 0
+
+  - id: "sn_11"
+    text: "You're drawn to ministry that involves..."
+    dimension: "SN"
+    options:
+      - text: "Meeting practical, immediate needs"
+        weight: 2
+      - text: "Casting vision and exploring new possibilities"
+        weight: -2
+      - text: "Innovating and pioneering new approaches"
+        weight: -1
+      - text: "Faithful service in proven methods"
+        weight: 1
+
+  # Thinking/Feeling Questions (11)
+  - id: "tf_01"
+    text: "When making an important decision, you prioritize..."
+    dimension: "TF"
+    options:
+      - text: "Objective analysis and logical reasoning"
+        weight: 2
+      - text: "How it affects people and relationships"
+        weight: -2
+      - text: "Values and the impact on people's wellbeing"
+        weight: -1
+      - text: "A balance of logic and people's needs"
+        weight: 0
+
+  - id: "tf_02"
+    text: "When giving feedback to someone, you..."
+    dimension: "TF"
+    options:
+      - text: "Focus on the facts and what needs improvement"
+        weight: 2
+      - text: "Consider their feelings and frame it gently"
+        weight: -2
+      - text: "Prioritize maintaining the relationship"
+        weight: -1
+      - text: "Be honest but considerate"
+        weight: 0
+
+  - id: "tf_03"
+    text: "You're more complimented by being called..."
+    dimension: "TF"
+    options:
+      - text: "Competent and intelligent"
+        weight: 2
+      - text: "Caring and compassionate"
+        weight: -2
+      - text: "Kind and understanding"
+        weight: -1
+      - text: "Both smart and caring"
+        weight: 0
+
+  - id: "tf_04"
+    text: "When someone shares a problem, you first..."
+    dimension: "TF"
+    options:
+      - text: "Analyze the situation to find solutions"
+        weight: 2
+      - text: "Empathize and offer emotional support"
+        weight: -2
+      - text: "Make sure they feel heard and understood"
+        weight: -1
+      - text: "Listen, then help problem-solve"
+        weight: 0
+
+  - id: "tf_05"
+    text: "In conflicts, you value..."
+    dimension: "TF"
+    options:
+      - text: "Finding the truth and what's fair"
+        weight: 2
+      - text: "Preserving harmony and understanding"
+        weight: -2
+      - text: "Everyone feeling valued and respected"
+        weight: -1
+      - text: "Resolution that works for everyone"
+        weight: 0
+
+  - id: "tf_06"
+    text: "You're more motivated by..."
+    dimension: "TF"
+    options:
+      - text: "Achieving goals and maintaining standards"
+        weight: 2
+      - text: "Building relationships and helping others"
+        weight: -2
+      - text: "Making a positive impact on people's lives"
+        weight: -1
+      - text: "Accomplishing meaningful work"
+        weight: 0
+
+  - id: "tf_07"
+    text: "When studying doctrine or theology, you..."
+    dimension: "TF"
+    options:
+      - text: "Appreciate logical consistency and clear definitions"
+        weight: 2
+      - text: "Care about how it affects people's faith"
+        weight: -2
+      - text: "Consider the pastoral and relational implications"
+        weight: -1
+      - text: "Value both accuracy and application"
+        weight: 0
+
+  - id: "tf_08"
+    text: "Your leadership style emphasizes..."
+    dimension: "TF"
+    options:
+      - text: "Competence, efficiency, and results"
+        weight: 2
+      - text: "Team wellbeing, encouragement, and support"
+        weight: -2
+      - text: "People development and healthy relationships"
+        weight: -1
+      - text: "Both task completion and team care"
+        weight: 0
+
+  - id: "tf_09"
+    text: "You're naturally better at..."
+    dimension: "TF"
+    options:
+      - text: "Being objective and seeing issues clearly"
+        weight: 2
+      - text: "Being empathetic and reading emotions"
+        weight: -2
+      - text: "Understanding people's feelings and needs"
+        weight: -1
+      - text: "Both analysis and empathy"
+        weight: 0
+
+  - id: "tf_10"
+    text: "In ministry, you're drawn to..."
+    dimension: "TF"
+    options:
+      - text: "Teaching truth and maintaining doctrinal clarity"
+        weight: 2
+      - text: "Pastoral care and emotional support"
+        weight: -2
+      - text: "Mercy ministry and compassionate service"
+        weight: -1
+      - text: "Both teaching and caring for people"
+        weight: 0
+
+  - id: "tf_11"
+    text: "When correcting someone, you believe it's important to..."
+    dimension: "TF"
+    options:
+      - text: "Be direct and clear about what's wrong"
+        weight: 2
+      - text: "Be gentle and consider their emotional state"
+        weight: -2
+      - text: "Prioritize the relationship while addressing the issue"
+        weight: -1
+      - text: "Be truthful and kind"
+        weight: 0
+
+  # Judging/Perceiving Questions (11)
+  - id: "jp_01"
+    text: "You prefer your day to be..."
+    dimension: "JP"
+    options:
+      - text: "Planned and structured with a clear schedule"
+        weight: 2
+      - text: "Spontaneous and flexible with room to adapt"
+        weight: -2
+      - text: "Open-ended with options to explore"
+        weight: -1
+      - text: "Loosely planned with some structure"
+        weight: 0
+
+  - id: "jp_02"
+    text: "When starting a project, you..."
+    dimension: "JP"
+    options:
+      - text: "Create a detailed plan before beginning"
+        weight: 2
+      - text: "Jump in and figure it out as you go"
+        weight: -2
+      - text: "Start with exploration then organize"
+        weight: -1
+      - text: "Outline the basics then begin"
+        weight: 0
+
+  - id: "jp_03"
+    text: "Your workspace is typically..."
+    dimension: "JP"
+    options:
+      - text: "Organized and everything has its place"
+        weight: 2
+      - text: "Chaotic but you know where things are"
+        weight: -2
+      - text: "Casually organized with creative clutter"
+        weight: -1
+      - text: "Fairly organized most of the time"
+        weight: 0
+
+  - id: "jp_04"
+    text: "Deadlines make you feel..."
+    dimension: "JP"
+    options:
+      - text: "Motivated and you work to finish early"
+        weight: 2
+      - text: "Stressed and you work better with pressure"
+        weight: -2
+      - text: "You tend to push them and need the adrenaline"
+        weight: -1
+      - text: "Focused and you complete work on time"
+        weight: 1
+
+  - id: "jp_05"
+    text: "When planning a trip, you..."
+    dimension: "JP"
+    options:
+      - text: "Research and create a detailed itinerary"
+        weight: 2
+      - text: "Keep it flexible and decide as you go"
+        weight: -2
+      - text: "Have a loose plan but stay open to changes"
+        weight: -1
+      - text: "Book key things but leave room for spontaneity"
+        weight: 0
+
+  - id: "jp_06"
+    text: "You feel more comfortable with..."
+    dimension: "JP"
+    options:
+      - text: "Decisions made and plans finalized"
+        weight: 2
+      - text: "Options open and flexibility maintained"
+        weight: -2
+      - text: "Keeping your choices open as long as possible"
+        weight: -1
+      - text: "Deciding when necessary"
+        weight: 0
+
+  - id: "jp_07"
+    text: "In ministry involvement, you prefer..."
+    dimension: "JP"
+    options:
+      - text: "Regular commitments and structured roles"
+        weight: 2
+      - text: "Varied opportunities and spontaneous service"
+        weight: -2
+      - text: "Freedom to serve when and how you feel led"
+        weight: -1
+      - text: "Some structure with flexibility"
+        weight: 0
+
+  - id: "jp_08"
+    text: "When tasks pile up, you..."
+    dimension: "JP"
+    options:
+      - text: "Create a prioritized list and work through it"
+        weight: 2
+      - text: "Do what feels most urgent or interesting"
+        weight: -2
+      - text: "Stay flexible and adapt as things change"
+        weight: -1
+      - text: "Organize priorities then get started"
+        weight: 1
+
+  - id: "jp_09"
+    text: "You view rules as..."
+    dimension: "JP"
+    options:
+      - text: "Important structures to follow"
+        weight: 2
+      - text: "Guidelines that can be adapted"
+        weight: -2
+      - text: "Suggestions to consider contextually"
+        weight: -1
+      - text: "Generally useful with some flexibility"
+        weight: 0
+
+  - id: "jp_10"
+    text: "Your approach to Bible study is..."
+    dimension: "JP"
+    options:
+      - text: "Systematic with a structured reading plan"
+        weight: 2
+      - text: "Spontaneous based on what draws you"
+        weight: -2
+      - text: "Free-flowing as the Spirit leads"
+        weight: -1
+      - text: "A mix of planned and spontaneous"
+        weight: 0
+
+  - id: "jp_11"
+    text: "You would describe yourself as..."
+    dimension: "JP"
+    options:
+      - text: "Organized, decisive, and planned"
+        weight: 2
+      - text: "Adaptable, spontaneous, and flexible"
+        weight: -2
+      - text: "Go-with-the-flow and open to change"
+        weight: -1
+      - text: "Balanced between structure and flexibility"
+        weight: 0

@@ -1,0 +1,274 @@
+# MBTI Personality Profiles with Biblical Interpretations
+# Each type maps to Biblical characters, spiritual gifts, and ministry suggestions
+
+INTJ:
+  biblical_characters:
+    - "Apostle Paul - Strategic theologian and church planter"
+    - "Moses - Visionary leader with long-term planning"
+    - "Daniel - Wise counselor and interpreter"
+  spiritual_gifts:
+    - "Teaching"
+    - "Knowledge"
+    - "Leadership"
+    - "Wisdom"
+  ministry_suggestions:
+    - "Strategic planning and vision casting"
+    - "Theology teaching and apologetics"
+    - "Mission strategy development"
+    - "Long-term discipleship programs"
+  description: "The Architect - You are a strategic and independent thinker who sees patterns and possibilities others miss. Like Paul, you excel at developing comprehensive systems and teaching deep truths. Your gift is bringing clarity to complex theological concepts and building structures that serve God's kingdom long-term."
+
+INTP:
+  biblical_characters:
+    - "Luke - Careful researcher and analytical writer"
+    - "Solomon - Seeker of wisdom and knowledge"
+    - "Nicodemus - Thoughtful questioner"
+  spiritual_gifts:
+    - "Knowledge"
+    - "Wisdom"
+    - "Teaching"
+    - "Discernment"
+  ministry_suggestions:
+    - "Biblical research and scholarship"
+    - "Apologetics and philosophical discussions"
+    - "Problem-solving in ministry contexts"
+    - "Teaching complex theological concepts"
+  description: "The Logician - You are an innovative thinker who loves exploring ideas and solving complex problems. Like Luke, you approach faith with careful analysis and precision. Your gift is helping others understand the logical foundations of faith and addressing difficult theological questions with clarity and depth."
+
+ENTJ:
+  biblical_characters:
+    - "Joshua - Bold military and spiritual leader"
+    - "Nehemiah - Efficient project manager and rebuilder"
+    - "Deborah - Decisive judge and prophet"
+  spiritual_gifts:
+    - "Leadership"
+    - "Administration"
+    - "Faith"
+    - "Teaching"
+  ministry_suggestions:
+    - "Church leadership and eldership"
+    - "Ministry project management"
+    - "Church planting initiatives"
+    - "Strategic ministry expansion"
+  description: "The Commander - You are a natural leader who takes charge and drives results. Like Nehemiah, you excel at organizing people and resources to accomplish God's vision. Your gift is mobilizing the church toward meaningful action and overcoming obstacles that stand in the way of kingdom work."
+
+ENTP:
+  biblical_characters:
+    - "Peter - Spontaneous and innovative apostle"
+    - "Philip - Creative evangelist and explainer"
+    - "Apollos - Eloquent debater and teacher"
+  spiritual_gifts:
+    - "Evangelism"
+    - "Teaching"
+    - "Exhortation"
+    - "Knowledge"
+  ministry_suggestions:
+    - "Innovative outreach programs"
+    - "Debate and apologetics"
+    - "Creative problem-solving in ministry"
+    - "Youth and young adult ministry"
+  description: "The Debater - You are a quick-thinking innovator who loves exploring new ideas and challenging conventional thinking. Like Peter, you're bold in sharing faith and aren't afraid to question traditions. Your gift is bringing fresh perspectives to ministry and engaging skeptics with creative approaches to the gospel."
+
+INFJ:
+  biblical_characters:
+    - "Jeremiah - Compassionate prophet with deep convictions"
+    - "John - Beloved disciple focused on love"
+    - "Ezekiel - Visionary with symbolic insights"
+  spiritual_gifts:
+    - "Prophecy"
+    - "Discernment"
+    - "Mercy"
+    - "Wisdom"
+  ministry_suggestions:
+    - "Spiritual counseling and discipleship"
+    - "Prayer ministry and intercession"
+    - "Writing and prophetic insight"
+    - "One-on-one mentorship"
+  description: "The Advocate - You are a compassionate idealist with deep insights into people and spiritual truths. Like Jeremiah, you feel deeply and see beyond the surface to underlying spiritual realities. Your gift is helping others find meaning and guiding them toward authentic relationship with God."
+
+INFP:
+  biblical_characters:
+    - "Jeremiah - Sensitive prophet who wept for his people"
+    - "Mary of Bethany - Devoted worshiper"
+    - "John Mark - Faithful companion and recorder"
+  spiritual_gifts:
+    - "Mercy"
+    - "Encouragement"
+    - "Exhortation"
+    - "Prophecy"
+  ministry_suggestions:
+    - "Worship ministry and creative arts"
+    - "Writing and storytelling"
+    - "Compassionate care ministry"
+    - "Missions and humanitarian work"
+  description: "The Mediator - You are guided by your values and have a deep desire to help others and make the world a better place. Like Mary of Bethany, your worship is authentic and heartfelt. Your gift is expressing faith through creativity and showing Christ's love through genuine compassion and understanding."
+
+ENFJ:
+  biblical_characters:
+    - "Barnabas - Encourager and people developer"
+    - "Joshua - Inspirational leader who rallied people"
+    - "Aquila & Priscilla - Mentors and community builders"
+  spiritual_gifts:
+    - "Exhortation"
+    - "Teaching"
+    - "Leadership"
+    - "Mercy"
+  ministry_suggestions:
+    - "Small group leadership"
+    - "Mentorship and discipleship"
+    - "Community outreach coordination"
+    - "Pastoral care and counseling"
+  description: "The Protagonist - You are a charismatic leader who inspires and uplifts others. Like Barnabas, you see potential in people and help them grow. Your gift is creating communities where people feel valued and empowered to use their gifts for God's kingdom."
+
+ENFP:
+  biblical_characters:
+    - "David - Passionate worship leader and poet"
+    - "Elijah - Dramatic prophet with boldness"
+    - "Barnabas - Encouraging and enthusiastic"
+  spiritual_gifts:
+    - "Encouragement"
+    - "Evangelism"
+    - "Exhortation"
+    - "Faith"
+  ministry_suggestions:
+    - "Youth ministry and camps"
+    - "Creative worship leadership"
+    - "Evangelism and outreach"
+    - "Church planting and pioneering"
+  description: "The Campaigner - You are an enthusiastic and creative soul who loves connecting with people and exploring possibilities. Like David, you bring passion and authenticity to worship. Your gift is inspiring others with your contagious faith and helping them see God's exciting plans for their lives."
+
+ISTJ:
+  biblical_characters:
+    - "Joseph (Mary's husband) - Faithful and responsible"
+    - "Ezra - Diligent scribe and teacher"
+    - "Luke - Careful historian and physician"
+  spiritual_gifts:
+    - "Administration"
+    - "Service"
+    - "Teaching"
+    - "Helps"
+  ministry_suggestions:
+    - "Church administration and finances"
+    - "Faithful teaching of Scripture"
+    - "Building maintenance and operations"
+    - "Record-keeping and organization"
+  description: "The Logistician - You are dependable and thorough, committed to doing things right. Like Joseph, you faithfully fulfill your responsibilities with integrity. Your gift is creating order and stability that allows ministry to function smoothly, often working behind the scenes to serve others."
+
+ISFJ:
+  biblical_characters:
+    - "Martha - Devoted servant and host"
+    - "Mary (mother of Jesus) - Faithful and nurturing"
+    - "Dorcas/Tabitha - Known for helping the poor"
+  spiritual_gifts:
+    - "Service"
+    - "Mercy"
+    - "Helps"
+    - "Hospitality"
+  ministry_suggestions:
+    - "Hospitality and fellowship coordination"
+    - "Care ministry for sick and elderly"
+    - "Children's ministry"
+    - "Practical service and helps"
+  description: "The Defender - You are a dedicated caregiver who quietly serves others with warmth and reliability. Like Martha, you show love through practical acts of service. Your gift is creating safe, welcoming spaces where people feel cared for and supported in their walk with God."
+
+ESTJ:
+  biblical_characters:
+    - "Nehemiah - Organized rebuilder and administrator"
+    - "Boaz - Responsible and principled leader"
+    - "Titus - Reliable church organizer"
+  spiritual_gifts:
+    - "Administration"
+    - "Leadership"
+    - "Teaching"
+    - "Exhortation"
+  ministry_suggestions:
+    - "Church board and governance"
+    - "Event planning and execution"
+    - "Building projects and facilities"
+    - "Ministry operations management"
+  description: "The Executive - You are a natural organizer who values tradition and gets things done efficiently. Like Nehemiah, you excel at managing projects and leading teams. Your gift is bringing structure and excellence to ministry operations, ensuring the church runs smoothly and honors God through quality work."
+
+ESFJ:
+  biblical_characters:
+    - "Lydia - Hospitable businesswoman and church supporter"
+    - "Priscilla - Welcoming teacher and host"
+    - "Phoebe - Faithful deacon and helper"
+  spiritual_gifts:
+    - "Hospitality"
+    - "Service"
+    - "Mercy"
+    - "Exhortation"
+  ministry_suggestions:
+    - "Hospitality and welcome teams"
+    - "Fellowship event coordination"
+    - "Community care and connection"
+    - "Children and family ministry"
+  description: "The Consul - You are warm and conscientious, finding joy in helping others feel included and cared for. Like Lydia, you create community through generous hospitality. Your gift is bringing people together and ensuring everyone feels welcomed and valued in the body of Christ."
+
+ISTP:
+  biblical_characters:
+    - "Bezalel - Skilled craftsman for the tabernacle"
+    - "Nehemiah - Practical problem-solver"
+    - "Simon the tanner - Useful tradesman to Peter"
+  spiritual_gifts:
+    - "Helps"
+    - "Service"
+    - "Craftsmanship"
+    - "Administration"
+  ministry_suggestions:
+    - "Building and maintenance ministry"
+    - "Technical support and systems"
+    - "Practical problem-solving"
+    - "Hands-on service projects"
+  description: "The Virtuoso - You are a practical problem-solver who works well with your hands and enjoys figuring out how things work. Like Bezalel, you have practical skills that serve God's purposes. Your gift is fixing problems and creating functional solutions that support ministry work."
+
+ISFP:
+  biblical_characters:
+    - "Mary of Bethany - Devoted and expressive worshiper"
+    - "Miriam - Creative worship leader"
+    - "Bezalel - Artistic craftsman"
+  spiritual_gifts:
+    - "Mercy"
+    - "Service"
+    - "Helps"
+    - "Creative Arts"
+  ministry_suggestions:
+    - "Worship arts and creative expression"
+    - "Compassionate care ministry"
+    - "Children's ministry and crafts"
+    - "Behind-the-scenes service"
+  description: "The Adventurer - You are gentle and artistic, expressing faith through creativity and quiet service. Like Mary of Bethany, your devotion is sincere and often expressed through actions rather than words. Your gift is bringing beauty and tenderness to ministry through creative expression."
+
+ESTP:
+  biblical_characters:
+    - "Samson - Bold and action-oriented"
+    - "Gideon - Reluctant but courageous warrior"
+    - "Peter - Impulsive and energetic"
+  spiritual_gifts:
+    - "Faith"
+    - "Leadership"
+    - "Evangelism"
+    - "Service"
+  ministry_suggestions:
+    - "Sports and recreation ministry"
+    - "Outreach and evangelism events"
+    - "Crisis response and practical help"
+    - "Youth ministry and adventure programs"
+  description: "The Entrepreneur - You are energetic and action-oriented, thriving in dynamic situations. Like Peter, you're quick to act and learn by doing. Your gift is engaging people through active ministry and showing Christ's love through bold action and practical service."
+
+ESFP:
+  biblical_characters:
+    - "David - Expressive worship leader"
+    - "Miriam - Celebratory and joyful"
+    - "Philip the Evangelist - Spontaneous and engaging"
+  spiritual_gifts:
+    - "Encouragement"
+    - "Evangelism"
+    - "Hospitality"
+    - "Mercy"
+  ministry_suggestions:
+    - "Worship and celebration ministry"
+    - "Greeting and hospitality teams"
+    - "Children's ministry and entertainment"
+    - "Social events and community building"
+  description: "The Entertainer - You are enthusiastic and spontaneous, bringing joy and energy wherever you go. Like David, you celebrate God with exuberance. Your gift is making faith fun and accessible, helping others experience the joy of knowing Christ through your infectious enthusiasm and warmth."

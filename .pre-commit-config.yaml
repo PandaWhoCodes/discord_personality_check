@@ -1,0 +1,51 @@
+# Pre-commit configuration for Discord Personality Bot
+# See https://pre-commit.com for more information
+
+repos:
+  # Black - Python code formatter
+  - repo: https://github.com/psf/black
+    rev: 25.9.0
+    hooks:
+      - id: black
+        language_version: python3.11
+        args: [--line-length=100]
+
+  # General pre-commit hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      # Prevent committing large files
+      - id: check-added-large-files
+        args: [--maxkb=1000]
+
+      # Check for files that would conflict on case-insensitive filesystems
+      - id: check-case-conflict
+
+      # Check for merge conflicts
+      - id: check-merge-conflict
+
+      # Check YAML files for syntax errors
+      - id: check-yaml
+        args: [--unsafe]  # Allow custom YAML tags
+
+      # Check JSON files for syntax errors
+      - id: check-json
+
+      # Ensure files end with a newline
+      - id: end-of-file-fixer
+
+      # Remove trailing whitespace
+      - id: trailing-whitespace
+
+      # Prevent committing .env files with secrets
+      - id: detect-private-key
+
+  # Python-specific checks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      # Check Python syntax
+      - id: check-ast
+
+      # Check for debugger imports
+      - id: debug-statements
