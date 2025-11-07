@@ -1,10 +1,15 @@
-# Discord MBTI Personality Bot
+# FiT Discord Bot (Faith in Tech)
 
-A Discord bot that administers a comprehensive 44-question MBTI personality test with Biblical character alignments, spiritual gifts, and ministry suggestions.
+A modular Discord bot providing engagement tools for Christian communities. Currently features a comprehensive MBTI personality test with Biblical character alignments, spiritual gifts, and ministry suggestions.
 
-## Features
+## About FiT (Faith in Tech)
 
-- 44-question MBTI test covering all 4 personality dimensions
+This bot serves as a platform for multiple engagement tools designed to foster community, spiritual growth, and interaction in Discord servers. The modular architecture allows easy addition of new commands and features.
+
+## Current Features
+
+### MBTI Personality Test
+- 44-question comprehensive personality assessment
 - Interactive button-based interface
 - Personalized results with:
   - Biblical character matches
@@ -12,8 +17,15 @@ A Discord bot that administers a comprehensive 44-question MBTI personality test
   - Ministry suggestions
   - Detailed personality descriptions
 - Session persistence (resume incomplete tests)
+- Message analytics tracking
+
+### Technical Features
+- Modular command system (easily extensible)
+- Text commands and slash commands support
 - Clean Architecture design
-- SQLite database storage
+- Turso (libSQL) database with sync
+- Pre-commit hooks with Black formatting
+- Comprehensive test suite
 
 ## Setup
 
@@ -27,8 +39,8 @@ A Discord bot that administers a comprehensive 44-question MBTI personality test
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd discord_personality_check
+git clone https://github.com/PandaWhoCodes/FiT_discord_bot.git
+cd FiT_discord_bot
 ```
 
 2. Create and activate a virtual environment:
@@ -86,20 +98,27 @@ The bot will:
 
 ## Usage
 
-### Taking the Test
+### Available Commands
 
-1. In any Discord channel where the bot has access, type:
-   ```
-   /get-personality
-   ```
+#### Personality Test
+- **Text commands**:
+  - `start test` - Begin the full 44-question MBTI test
+  - `start dummy test` - Quick test with fewer questions
+- **Slash commands**:
+  - `/personality` - Full MBTI personality test
+  - `/personality-quick` - Abbreviated test version
 
-2. The bot will send you an ephemeral message (only you can see it) with the first question
+### Taking the Personality Test
 
-3. Click the appropriate button (A, B, C, or D) to answer each question
+1. In any Discord channel where the bot has access, use one of the commands above
 
-4. Progress through all 44 questions
+2. The bot will send you a DM (or ephemeral message) with the first question
 
-5. Receive your MBTI type with Biblical insights
+3. Click the appropriate button to answer each question
+
+4. Progress through all questions
+
+5. Receive your MBTI type with Biblical character alignments and ministry suggestions
 
 ### Results Include
 
@@ -112,62 +131,74 @@ The bot will:
 ## Project Structure
 
 ```
-discord_personality_check/
+FiT_discord_bot/
 ├── src/
-│   ├── domain/              # Core business logic
-│   │   ├── models/         # Data models
-│   │   ├── services/       # Business services
-│   │   └── interfaces/     # Repository contracts
-│   ├── application/         # Use cases
-│   │   ├── commands/       # Command handlers
-│   │   └── queries/        # Query handlers
-│   ├── infrastructure/      # External concerns
-│   │   ├── discord/        # Discord bot integration
-│   │   ├── database/       # SQLite repositories
-│   │   └── loaders/        # YAML data loaders
-│   └── main.py             # Application entry point
+│   ├── main.py              # Bot initialization & event loop
+│   ├── commands/            # Command modules
+│   │   ├── text_commands.py    # Decorator-based text commands
+│   │   └── slash_commands.py   # Slash command registration
+│   ├── analytics/           # Message tracking
+│   │   └── messages.py
+│   ├── database.py          # Turso database operations
+│   ├── models.py            # Data models (UserSession, etc.)
+│   └── personality.py       # Test logic & button UI
 ├── data/
-│   ├── questions.yaml      # 44 MBTI questions
-│   ├── personality_profiles.yaml  # 16 personality profiles
-│   └── personality_test.db # SQLite database (created on first run)
+│   ├── questions.yaml       # MBTI test questions
+│   └── personality_profiles.yaml  # Biblical profiles
 ├── docs/
-│   └── plans/              # Design documentation
+│   └── plans/               # Design documentation
+├── CLAUDE.md                # Technical documentation
 ├── .env                     # Environment configuration
 ├── requirements.txt         # Python dependencies
-└── README.md               # This file
+├── run.sh                   # Quick start script
+└── setup.sh                 # Full environment setup
 ```
 
 ## Architecture
 
-The bot follows Clean Architecture principles:
+The bot uses a **modular command system** for easy extensibility:
 
-- **Domain Layer**: Core business logic, no dependencies on external concerns
-- **Application Layer**: Use cases orchestrating domain logic
-- **Infrastructure Layer**: External integrations (Discord, Database, File I/O)
+### Key Design Patterns
 
-This design makes the code:
-- Testable
-- Maintainable
-- Independent of frameworks
-- Easy to migrate (e.g., to Turso DB)
+1. **Text Commands (Decorator Pattern)**: Add new text commands by decorating functions in `text_commands.py`
+2. **Slash Commands (Registration Function)**: Register slash commands in `slash_commands.py`
+3. **Command Context**: Shared resources passed to all commands
+
+### Adding New Commands
+
+To add a text command:
+```python
+@text_command("hello")
+async def handle_hello(message, context):
+    await message.channel.send("Hi there!")
+```
+
+To add a slash command:
+```python
+@tree.command(name="hello", description="Say hello")
+async def hello(interaction):
+    await interaction.response.send_message("Hi!")
+```
+
+**main.py never needs to change!** This makes adding new engagement tools simple and maintainable.
 
 ## Database
 
-The bot uses SQLite for local development. Tables:
+The bot uses **Turso (libSQL)** for cloud-synced database storage. Tables:
 
-- `users`: Tracks when users first/last took the test
-- `test_sessions`: Active and completed test sessions
-- `test_results`: Historical test results
+- `test_results`: Completed personality test results
+- `messages`: Analytics data for all Discord messages
 
-Database is automatically created on first run at `./data/personality_test.db`
+### Database Sync Strategy
+- **Startup**: Pulls latest from Turso
+- **After writes**: Commits and syncs to Turso
+- No periodic background syncs (keeps architecture simple)
 
-## Migration to Turso (Future)
-
-To migrate to Turso DB:
-1. Update `DATABASE_PATH` in `.env` to your Turso connection string
-2. Install `libsql-client`: `pip install libsql-client`
-3. Update database connection code to use Turso client
-4. No schema changes needed (Turso is SQLite-compatible)
+Configuration in `.env`:
+```bash
+TURSO_DATABASE_URL=libsql://...
+TURSO_AUTH_TOKEN=...
+```
 
 ## Troubleshooting
 
@@ -182,9 +213,9 @@ To migrate to Turso DB:
 - Check bot has `applications.commands` scope
 
 ### Database errors
-- Ensure `data/` directory exists
-- Check file permissions
-- Delete `personality_test.db` to recreate from scratch
+- Verify `TURSO_DATABASE_URL` and `TURSO_AUTH_TOKEN` in `.env`
+- Check network connectivity to Turso
+- Review database sync logs
 
 ### SSL Certificate errors (macOS)
 If you see `SSL: CERTIFICATE_VERIFY_FAILED` errors:
@@ -200,27 +231,51 @@ If you see `SSL: CERTIFICATE_VERIFY_FAILED` errors:
 ### Running Tests
 
 ```bash
-pytest
+python test_setup.py          # Import and setup tests
+python test_modular_setup.py  # Command registration tests
 ```
 
 ### Code Quality
 
-```bash
-# Format code
-black src/
+The project uses pre-commit hooks for automatic code formatting:
 
-# Lint code
-ruff check src/
+```bash
+# Install pre-commit hooks
+pre-commit install
+
+# Run manually
+pre-commit run --all-files
+
+# Format code
+black src/ --line-length=100
 ```
+
+## Roadmap
+
+Future engagement tools planned:
+- Daily devotional commands
+- Prayer request management
+- Scripture memory games
+- Community polls and surveys
+- Event management features
+
+## Contributing
+
+This is a Faith in Tech community project. Contributions are welcome! Please ensure:
+- Code follows Black formatting (100 char line length)
+- Pre-commit hooks pass
+- New commands use the modular command system
+- Documentation is updated
 
 ## License
 
-This project is for personal/ministry use.
+This project is for ministry and community use.
 
 ## Credits
 
-Built with Clean Architecture principles using:
-- discord.py
-- pydantic
-- aiosqlite
+Built with:
+- discord.py 2.3.0+
+- Turso (libSQL) database
+- Black formatter
+- Pre-commit hooks
 - PyYAML

@@ -1,8 +1,19 @@
-# Discord MBTI Personality Bot - AI Assistant Context
+# FiT Discord Bot (Faith in Tech) - AI Assistant Context
 
 ## Project Overview
 
-A Discord bot that administers MBTI personality tests through interactive button-based questions, stores results in a Turso database, and provides biblical character alignments and ministry suggestions.
+A modular Discord bot providing engagement tools for Christian communities. The bot uses a decorator-based command system for easy extensibility, allowing new features to be added without modifying core infrastructure.
+
+**Current Features:**
+- MBTI personality tests with Biblical character alignments
+- Message analytics for all Discord interactions
+- Modular command system (text + slash commands)
+
+**Future Tools:**
+- Daily devotionals
+- Prayer request management
+- Scripture memory games
+- Community engagement features
 
 **Tech Stack:**
 - Python 3.11
@@ -188,7 +199,7 @@ async def hello(interaction):
     await interaction.response.send_message("Hi!")
 ```
 
-**main.py never needs to change!**
+**main.py never needs to change!** This makes FiT easily extensible for new engagement tools.
 
 ## Key Files Reference
 
@@ -365,8 +376,11 @@ git commit -m "Add new feature"
 git add .
 git commit -m "Add new feature"
 
-# Emergency bypass (avoid if possible)
-git commit --no-verify -m "hotfix"
+# Push to GitHub
+git push origin master
+
+# Repository
+https://github.com/PandaWhoCodes/FiT_discord_bot
 ```
 
 ## Resources
@@ -390,8 +404,15 @@ git commit --no-verify -m "hotfix"
 - Implemented pre-commit + Black
 - Reduced main.py from 268 → 195 lines
 
+**Rebranding (2025-11-07):**
+- Renamed to FiT (Faith in Tech) Discord Bot
+- Positioned as platform for multiple engagement tools
+- Updated documentation for extensibility focus
+- Repository: https://github.com/PandaWhoCodes/FiT_discord_bot
+
 ---
 
 **Last Updated:** 2025-11-07
 **Python Version:** 3.11
 **Discord.py Version:** 2.3.0+
+**Project Name:** FiT Discord Bot (Faith in Tech)
