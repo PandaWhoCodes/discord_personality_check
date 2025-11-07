@@ -28,13 +28,24 @@ def init_database() -> None:
         sys.exit(1)
 
     try:
-        # Connect to Turso with embedded replica
-        db_conn = libsql.connect("personality_bot.db", sync_url=turso_url, auth_token=turso_token)
-        logger.info("Connected to Turso database")
+        # In production, connect directly to Turso (no embedded replica in containers)
+        # In development, use embedded replica with sync
+        environment = os.getenv("ENVIRONMENT", "development")
 
-        # Sync on startup to pull latest data from Turso
-        db_conn.sync()
-        logger.info("Synced with remote Turso database")
+        if environment == "production":
+            # Direct connection to Turso (no local replica)
+            db_conn = libsql.connect(turso_url, auth_token=turso_token)
+            logger.info("Connected directly to Turso database (production)")
+        else:
+            # Connect to Turso with embedded replica (development)
+            db_conn = libsql.connect(
+                "personality_bot.db", sync_url=turso_url, auth_token=turso_token
+            )
+            logger.info("Connected to Turso database with embedded replica (development)")
+
+            # Sync on startup to pull latest data from Turso
+            db_conn.sync()
+            logger.info("Synced with remote Turso database")
 
         # Create test_results table if not exists
         db_conn.execute(
@@ -131,7 +142,11 @@ def init_database() -> None:
         )
 
         db_conn.commit()
-        db_conn.sync()
+
+        # Only sync in development (with embedded replica)
+        if environment == "development":
+            db_conn.sync()
+
         logger.info("Database schema initialized")
 
     except Exception as e:
@@ -174,7 +189,11 @@ def save_test_result(
             ],
         )
         db_conn.commit()
-        db_conn.sync()
+
+        # Only sync in development
+        if os.getenv("ENVIRONMENT", "development") == "development":
+            db_conn.sync()
+
         logger.info(f"Saved test result for {username} ({user_id}): {personality_type}")
     except Exception as e:
         logger.error(f"Failed to save test result: {e}")
@@ -222,7 +241,11 @@ def save_message(message_data: dict) -> None:
             ],
         )
         db_conn.commit()
-        db_conn.sync()
+
+        # Only sync in development
+        if os.getenv("ENVIRONMENT", "development") == "development":
+            db_conn.sync()
+
     except Exception as e:
         logger.error(f"Failed to save message: {e}")
 
@@ -259,7 +282,11 @@ def save_prayer(prayer_data: dict) -> None:
             ],
         )
         db_conn.commit()
-        db_conn.sync()
+
+        # Only sync in development
+        if os.getenv("ENVIRONMENT", "development") == "development":
+            db_conn.sync()
+
         logger.info(
             f"Saved prayer from {prayer_data['discord_username']}: "
             f"{prayer_data['extracted_prayer'][:50]}..."
